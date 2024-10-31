@@ -16,3 +16,6 @@ vim.opt.ignorecase = true -- Case-insensitive search
 vim.opt.wrap = true -- Wrap long lines
 vim.opt.scrolloff = 8 -- Minimum lines to keep above/below the cursor
 vim.cmd("syntax on") -- Enable syntax highlighting
+
+-- map leader to backslash
+vim.g.mapleader = "\\"
