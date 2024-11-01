@@ -10,11 +10,12 @@ startup.header = {
   title = "Welcome",
   margin = 5,
   content = {
-    "  ____        _   _               ",
-    " / ___|  __ _| |_| |__   ___ _ __ ",
-    " \\___ \\ / _` | __| '_ \\ / _ \\ '__|",
-    "  ___) | (_| | |_| | | |  __/ |   ",
-    " |____/ \\__,_|\\__|_| |_|\\___|_|   ",
+    " ███╗   ██╗██╗   ██╗██╗███╗   ███╗ ",
+    " ████╗  ██║██║   ██║██║████╗ ████║ ",
+    " ██╔██╗ ██║██║   ██║██║██╔████╔██║ ",
+    " ██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+    " ██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+    " ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
   },
   highlight = "String",
   default_color = "#56b6c2",
@@ -44,9 +45,9 @@ startup.footer = {
   type = "text",
   align = "center",
   content = function()
-    local clock = " " .. os.date("%H:%M")
-    local date = " " .. os.date("%d-%m-%y")
-    return { clock, date }
+    -- YYYY/MM/DD date will be shwon
+    local date = " " .. os.date("%Y/%m/%d")
+    return { date }
   end,
   fold_section = false,
   title = "Time",
