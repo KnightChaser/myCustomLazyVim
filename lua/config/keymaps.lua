@@ -29,3 +29,54 @@ vim.keymap.set("n", "<leader>ff", telescopeBuiltin.find_files, { desc = "Telesco
 vim.keymap.set("n", "<leader>fg", telescopeBuiltin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>fb", telescopeBuiltin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", telescopeBuiltin.help_tags, { desc = "Telescope help tags" })
+
+--- DAP(Debug Adapter Protocol)
+-- DAP Keybindings
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "", linehl = "", numhl = "" })
+
+-- Use alternative keybindings to avoid conflicts with terminalG
+vim.keymap.set("n", "<F5>", function()
+  require("dap").continue()
+end, { desc = "DAP Continue" })
+
+vim.keymap.set("n", "<Leader>do", function()
+  require("dap").step_over()
+end, { desc = "DAP Step Over" })
+
+vim.keymap.set("n", "<Leader>di", function()
+  require("dap").step_into()
+end, { desc = "DAP Step Into" })
+
+vim.keymap.set("n", "<Leader>du", function()
+  require("dap").step_out()
+end, { desc = "DAP Step Out" })
+
+vim.keymap.set("n", "<Leader>b", function()
+  require("dap").toggle_breakpoint()
+end, { desc = "DAP Toggle Breakpoint" })
+
+vim.keymap.set("n", "<Leader>B", function()
+  require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+end, { desc = "DAP Conditional Breakpoint" })
+
+vim.keymap.set("n", "<Leader>lp", function()
+  require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+end, { desc = "DAP Log Point" })
+
+vim.keymap.set("n", "<Leader>dr", function()
+  require("dap").repl.open()
+end, { desc = "DAP REPL Open" })
+
+vim.keymap.set("n", "<Leader>dl", function()
+  require("dap").run_last()
+end, { desc = "DAP Run Last" })
+
+-- DAP widget keybindings
+vim.keymap.set("n", "<Leader>dc", function()
+  require("dapui").toggle()
+end, { desc = "DAP UI Toggle" })
+
+-- :lua require('dap.ui.widgets').hover()
+vim.keymap.set("n", "<Leader>dh", function()
+  require("dap.ui.widgets").hover()
+end, { desc = "DAP Hover" })
