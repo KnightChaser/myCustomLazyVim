@@ -53,4 +53,5 @@ return {
   },
 }
 ```
-   
+2.  This setup also includes WakaTime extension. Visit https://wakatime.com/neovim for API key setup and more information.
+    If you don't use WakaTime, you can simply ignore this setup and nothing will be happened.
