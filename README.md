@@ -1,5 +1,10 @@
 # myCustomLazyVim
 
+### PREVIEW
+![image](https://github.com/user-attachments/assets/275b6fec-917e-4745-88e3-c42a247259c7)
+![image](https://github.com/user-attachments/assets/29d6bd5b-8db4-499e-af10-f84ba1401a86)
+
+
 ### PROCEDURE
 
 1. Using `bob`(https://github.com/MordechaiHadad/bob) package, Install the latest neovim(`nvim`) on your Ubuntu Linux(Installing `nightly` is encouraged).
@@ -21,7 +26,6 @@ git clone https://github.com/KnightChaser/myCustomLazyVim ~/.config/nvim
 ```
 
 4. Execute neovim(`nvim`). Hit `:Lazy sync` to synchronize the packages. After, the neovim will be ready to use!
-![image](https://github.com/user-attachments/assets/f3fbffea-2db9-4ad1-ae7c-1a18714cd6f6)
 
 
 ### Note
