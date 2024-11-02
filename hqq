@@ -1,0 +1,125 @@
+[33mcommit cd9037e02a783de283e4da4423a40140f97e99d5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Sat Nov 2 17:59:58 2024 +0900
+
+    Adjust the Copilot/cmp(autocompletion) configurations for seamless integration without any cluttering
+
+[33mcommit 109861151a8280d81afdbdd37737b99be6ea4a0c[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Sat Nov 2 15:07:35 2024 +0900
+
+    Enabled Markdown syntax help
+
+[33mcommit fdd7c408688a1fcb35010f3a2c40a2d873efe3b8[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 23:29:43 2024 +0900
+
+    Apply DAP(Debug Adapter Protocol) for neovim with UI(dap-ui)
+
+[33mcommit 1f44c65fed92575e1ff7a1129910236c5624669f[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 21:46:19 2024 +0900
+
+    Updated extension
+
+[33mcommit 243ba59b99261d65c2082cc1c7e668f48325bd7b[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 17:50:59 2024 +0900
+
+    Added golang LSP to neovim
+
+[33mcommit dd692dde3f42f8ec267126ce854c3ffa92c8d511[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 16:55:13 2024 +0900
+
+    Delete unnecessary empty file
+
+[33mcommit 885b03e6daa96e61a98179b1f6ca6be33be2ea57[m
+Author: Garam Lee <47494005+KnightChaser@users.noreply.github.com>
+Date:   Fri Nov 1 13:43:19 2024 +0900
+
+    Update README.md
+
+[33mcommit 45377e6f93383d57c3de51a0a98f7032f472b508[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 13:41:27 2024 +0900
+
+    Display some famous quotes randomly on welcome page
+
+[33mcommit 48211f4091dae506883433276a30ecd622912fa6[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 13:31:04 2024 +0900
+
+    Adjust NVIM startup style
+
+[33mcommit c080b970348e22c6d2ce7c916dc843f8fdaa5391[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 12:23:13 2024 +0900
+
+    Manual copilot handling configuration
+
+[33mcommit 01a646e0b597fc651e681979fa7f9c26d290ac8b[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Fri Nov 1 09:57:34 2024 +0900
+
+    Install WakaTime plugin
+
+[33mcommit f1fb7d78621833d58d0e7e2b156865639dc6d812[m
+Author: Garam Lee <47494005+KnightChaser@users.noreply.github.com>
+Date:   Fri Nov 1 09:49:38 2024 +0900
+
+    An important note about LSP(Language Server Protocol) setup
+
+[33mcommit ccebedd37e9f2263b3f8618f19cb097dbdaf3186[m
+Author: Garam Lee <47494005+KnightChaser@users.noreply.github.com>
+Date:   Fri Nov 1 09:40:19 2024 +0900
+
+    Create README.md
+
+[33mcommit cf46573623301aa485f7a4229eba51d19061226c[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 23:52:57 2024 +0900
+
+    Basic neovim startup page setup(further styling is required)
+
+[33mcommit 5e1c16d27550c03578960e8ccacc8f2fc73e148e[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 23:06:43 2024 +0900
+
+    Install nvim-tree.lua
+
+[33mcommit 03bd2a70d098ccde1720e5dc82bc847bba792036[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 22:54:27 2024 +0900
+
+    Install telescope.nvim
+
+[33mcommit f25d029b6d4445123adb0b2123468b687598e15f[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 18:03:51 2024 +0900
+
+    Add LSP conigurations for neovim and enable for C/Python
+
+[33mcommit 70c8f6cba819df4da03d76523aea89f8c745c7ee[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 16:38:10 2024 +0900
+
+    install/activate recommended extensions
+
+[33mcommit 4a2ccbba136c1ba436a9bbd1c91ebcafe3efdafd[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 16:10:55 2024 +0900
+
+    Install lualine with some customizations
+
+[33mcommit ad4c2353cf2d72b3160d824401d9ab1f02d080c0[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 16:07:28 2024 +0900
+
+    Apply previous vim options I used
+
+[33mcommit 587f6ddc258b3bcb514c60c1b69133588e563910[m
+Author: knightchaser <agerio100@naver.com>
+Date:   Thu Oct 31 16:00:56 2024 +0900
+
+    Remove incorrect configurations
