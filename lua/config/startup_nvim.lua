@@ -48,7 +48,27 @@ startup.system_info = {
     local nvim_version = "Neovim: " .. vim.version().major .. "." .. vim.version().minor .. "." .. vim.version().patch
     local os_info = "OS: " .. vim.loop.os_uname().sysname .. " " .. vim.loop.os_uname().release
 
-    return { nvim_version, os_info }
+    -- Load last shutdown time
+    local last_shutdown_file = vim.fn.stdpath("data") .. "/last_shutdown.txt"
+    local last_shutdown_time
+    local file = io.open(last_shutdown_file, "r")
+    if file then
+      last_shutdown_time = tonumber(file:read("*a"))
+      file:close()
+    end
+
+    local last_used = last_shutdown_time and os.date("%Y/%m/%d %H:%M:%S", last_shutdown_time) or "N/A"
+    local time_elapsed = last_shutdown_time and os.difftime(os.time(), last_shutdown_time) or 0
+
+    local days = math.floor(time_elapsed / 86400)
+    local hours = math.floor((time_elapsed % 86400) / 3600)
+    local minutes = math.floor((time_elapsed % 3600) / 60)
+    local seconds = math.floor(time_elapsed % 60)
+
+    local elapsed_text =
+      string.format("Last used: %s (Elapsed: %dd %dh %dm %ds)", last_used, days, hours, minutes, seconds)
+
+    return { nvim_version, os_info, elapsed_text }
   end,
   fold_section = false,
   title = "System Info",
