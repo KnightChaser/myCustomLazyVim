@@ -40,6 +40,23 @@ startup.menu = {
   default_color = "#c678dd",
 }
 
+-- System Information Section
+startup.system_info = {
+  type = "text",
+  align = "center",
+  content = function()
+    local nvim_version = "Neovim: " .. vim.version().major .. "." .. vim.version().minor .. "." .. vim.version().patch
+    local os_info = "OS: " .. vim.loop.os_uname().sysname .. " " .. vim.loop.os_uname().release
+
+    return { nvim_version, os_info }
+  end,
+  fold_section = false,
+  title = "System Info",
+  margin = 5,
+  highlight = "Function",
+  default_color = "#e5c07b",
+}
+
 -- Footer Section with Date, Time, and Random Quote
 startup.footer = {
   type = "text",
@@ -130,6 +147,6 @@ startup.footer = {
   default_color = "#98c379",
 }
 
-startup.parts = { "header", "menu", "footer" }
+startup.parts = { "header", "system_info", "menu", "footer" }
 
 return startup
