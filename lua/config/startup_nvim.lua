@@ -47,32 +47,62 @@ startup.footer = {
   content = function()
     local date = " " .. os.date("%Y/%m/%d")
 
-    -- Expanded list of famous quotes with attribution
+    -- Expanded list of hacking and cybersecurity-related quotes with attribution
     local quotes = {
-      { text = "Amateurs hack computers; professionals hack people.", author = "Bruce Schneier" },
-      { text = "The quieter you become, the more you are able to hear.", author = "Kali Linux" },
-      { text = "Hackers are today's samurai, testing security and integrity.", author = "Jeff Moss" },
-      { text = "The computer was born to solve problems that did not exist before.", author = "Bill Gates" },
-      { text = "Two types of companies: those hacked, and those that will be.", author = "Robert Mueller" },
-      { text = "The best way to predict the future is to invent it.", author = "Alan Kay" },
-      { text = "Any sufficiently advanced technology is indistinguishable from magic.", author = "Arthur C. Clarke" },
+      { text = "Security is not a product, but a process.", author = "Bruce Schneier" },
       {
-        text = "If you think technology can solve your problems, you don’t understand technology or your problems.",
+        text = "There is no such thing as a secure system, only systems that are secure enough.",
+        author = "Bruce Schneier",
+      },
+      { text = "Hackers are not just criminals; they are also innovators.", author = "Anonymous" },
+      { text = "In the world of cybersecurity, the adversary is always trying to outsmart us.", author = "Anonymous" },
+      { text = "Cybersecurity is much more than a matter of IT.", author = "Stephane Nappo" },
+      { text = "It's not if, it's when.", author = "Anonymous" },
+      { text = "Hacking is not a crime. It’s a way of thinking.", author = "Anonymous" },
+      { text = "An ounce of prevention is worth a pound of cure.", author = "Benjamin Franklin" },
+      { text = "The best defense is a good offense.", author = "Anonymous" },
+      { text = "To err is human, to forgive is not in cybersecurity.", author = "Anonymous" },
+      { text = "Data is the new oil, and cybersecurity is the refinery.", author = "Anonymous" },
+      {
+        text = "There are two types of companies: those that have been hacked, and those that will be.",
+        author = "Robert Mueller",
+      },
+      {
+        text = "If you think technology can solve your security problems, then you don’t understand technology or your security problems.",
         author = "Bruce Schneier",
       },
       {
-        text = "The Internet is the first thing that humanity has built that humanity doesn’t understand.",
+        text = "The more you know about a potential attacker, the better you can protect against them.",
+        author = "Anonymous",
+      },
+      { text = "A chain is only as strong as its weakest link.", author = "Proverb" },
+      {
+        text = "In cybersecurity, the battle is between the attacker and defender, and it's a constant arms race.",
+        author = "Anonymous",
+      },
+      { text = "Your security is only as strong as your weakest password.", author = "Anonymous" },
+      {
+        text = "The hacker mindset doesn't actually see what happens on the other side, it just exploits what you can see.",
+        author = "Anonymous",
+      },
+      { text = "Cybersecurity is a shared responsibility, not just the IT department’s.", author = "Anonymous" },
+      {
+        text = "The Internet is the first thing that humanity has built that humanity doesn’t understand, the largest experiment in anarchy that we have ever had.",
         author = "Eric Schmidt",
       },
+      {
+        text = "The problem with the digital world is not that it's broken; it's that it's being constantly broken.",
+        author = "Kevin Mitnick",
+      },
+      { text = "A security breach is not the end; it's the beginning of better security.", author = "Anonymous" },
+      { text = "Security is about understanding the threats and mitigating the risks.", author = "Anonymous" },
+      { text = "The more you know, the more you realize you know nothing.", author = "Socrates" },
+      { text = "Stay paranoid and you’ll stay safe.", author = "Anonymous" },
       {
         text = "Privacy is not an option, and it shouldn't be the price we accept for just getting on the Internet.",
         author = "Gary Kovacs",
       },
       { text = "With great power comes great responsibility.", author = "Uncle Ben" },
-      { text = "The art of security is to reduce risk while enabling business goals.", author = "Anonymous" },
-      { text = "Stay paranoid and you’ll stay safe.", author = "Anonymous" },
-      { text = "The more you know, the more you realize you know nothing.", author = "Socrates" },
-      { text = "Security is not a product, but a process.", author = "Bruce Schneier" },
       {
         text = "A computer is like air conditioning - it becomes useless when you open Windows.",
         author = "Linus Torvalds",
