@@ -1,8 +1,9 @@
 # myCustomLazyVim
 
 ### PREVIEW
-![image](https://github.com/user-attachments/assets/275b6fec-917e-4745-88e3-c42a247259c7)
-![image](https://github.com/user-attachments/assets/29d6bd5b-8db4-499e-af10-f84ba1401a86)
+![image](https://github.com/user-attachments/assets/4a16a324-c71a-4608-a66e-33264dc039c9)
+![image](https://github.com/user-attachments/assets/2d555526-3c1f-40cd-ae8b-e33d5f7863e7)
+
 
 
 ### PROCEDURE
