@@ -1,6 +1,6 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.coding.copilot",
+    "lazyvim.plugins.extras.ai.copilot",
     "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.editor.dial",
@@ -18,5 +18,5 @@
   "news": {
     "NEWS.md": "7107"
   },
-  "version": 6
+  "version": 7
 }
