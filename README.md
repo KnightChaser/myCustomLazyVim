@@ -74,6 +74,3 @@ return {
 # Install markdownlint-cli2
 brew install markdownlint-cli2
 ```
-
-```
-```
