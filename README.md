@@ -74,3 +74,4 @@ return {
 # Install markdownlint-cli2
 brew install markdownlint-cli2
 ```
+4. Always importantly, don't forget to issue `:checkhealth` and `:Mason` command if you encountered some errors! Especially if you just installed system, there might be some missing packages such as `curl`.
