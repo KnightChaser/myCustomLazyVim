@@ -80,3 +80,10 @@ end, { desc = "DAP UI Toggle" })
 vim.keymap.set("n", "<Leader>dh", function()
   require("dap.ui.widgets").hover()
 end, { desc = "DAP Hover" })
+
+--- menu.nvim
+-- Open the menu bar using Ctrl+t
+vim.keymap.set("n", "<C-t>", function()
+  local menu_options = require("menus.default") -- Load the default menu
+  require("menu").open(menu_options, { mouse = false, border = true })
+end, { noremap = true, silent = true, desc = "Open Menu Bar" })
