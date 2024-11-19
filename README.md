@@ -32,7 +32,9 @@ git clone https://github.com/KnightChaser/myCustomLazyVim ~/.config/nvim
 
 ### Note
 
-1. This neovim configuration also has LSP(Language Server Protocol)-related setup.
+1. Note that my setup includes some fancy icons as characters on the terminal, so it's required to install the **Nerd Fonts** font family at <https://www.nerdfonts.com/>. Download any font you want among that font family, and set the font to your terminal.
+
+2. This neovim configuration also has LSP(Language Server Protocol)-related setup.
    For proper syntax highlighting and assistance(Intellisense), proper packages must be installed.
    For example, if you want to use C language IntelliSense, required packages(`clangd` and `llvm` via `apt-get`) must be installed.
    And, lua configuration(**`lua/plugins/mason.lua`**) must be adjusted. Basically, the file configuration is support C language(`clangd`) and Python(`pyright`).
@@ -62,10 +64,10 @@ return {
 }
 ```
 
-2. This setup also includes WakaTime extension. Visit <https://wakatime.com/neovim> for API key setup and more information.
+3. This setup also includes WakaTime extension. Visit <https://wakatime.com/neovim> for API key setup and more information.
     If you don't use WakaTime, you can simply ignore this setup and nothing will be happened.
 
-3. For Markdown linting, see `./lua/plugins/render-markdown.lua`(You can just delete it away if you don't want.). Basically, it aesthetically reformats and shows up the formatted Markdown documents on the console. First, you have to install `markdownlint-cli2` via `brew`(homebrew). Refer to the following codes for installation
+4. For Markdown linting, see `./lua/plugins/render-markdown.lua`(You can just delete it away if you don't want.). Basically, it aesthetically reformats and shows up the formatted Markdown documents on the console. First, you have to install `markdownlint-cli2` via `brew`(homebrew). Refer to the following codes for installation
 
 ```bash
 # Install homebrew(brew)
@@ -75,4 +77,4 @@ return {
 brew install markdownlint-cli2
 ```
 
-4. Always importantly, don't forget to issue `:checkhealth` and `:Mason` command if you encountered some errors! Especially if you just installed system, there might be some missing packages such as `curl`.
+5. Always importantly, don't forget to issue `:checkhealth` and `:Mason` command if you encountered some errors! Especially if you just installed system, there might be some missing packages such as `curl`.
