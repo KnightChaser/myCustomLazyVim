@@ -19,6 +19,18 @@ return {
     rtxt = "tn",
   },
 
+  -- New File
+  {
+    name = "New File",
+    cmd = function()
+      vim.cmd "enew"
+    end,
+    rtxt = "<leader>nf",
+  },
+
+  -- Separator
+  { name = "separator" },
+
   -- Copy Current Line
   {
     name = "Copy Line",
@@ -42,7 +54,7 @@ return {
 
   -- Open in Terminal (Maintained)
   {
-    name = "  Open in terminal",
+    name = "  Open in Terminal",
     hl = "ExRed",
     cmd = function()
       local old_buf = require("menu.state").old_data.buf
@@ -70,6 +82,63 @@ return {
     cmd = function()
       require("minty.huefy").open()
     end,
+  },
+
+  -- Separator
+  { name = "separator" },
+
+  -- Find Files using Telescope
+  {
+    name = "Find Files",
+    cmd = function()
+      require("telescope.builtin").find_files()
+    end,
+    rtxt = "<leader>ff",
+  },
+
+  -- Find Word using Telescope
+  {
+    name = "Find Word",
+    cmd = function()
+      require("telescope.builtin").live_grep()
+    end,
+    rtxt = "<leader>lg",
+  },
+
+  -- Recent Files using Telescope
+  {
+    name = "Recent Files",
+    cmd = function()
+      require("telescope.builtin").oldfiles()
+    end,
+    rtxt = "<leader>of",
+  },
+
+  -- File Browser using Telescope (assuming nvim-tree is not desired here)
+  {
+    name = "File Browser",
+    cmd = function()
+      require("telescope").extensions.file_browser.file_browser()
+    end,
+    rtxt = "<leader>fb",
+  },
+
+  -- Colorscheme Selector
+  {
+    name = "Colorscheme",
+    cmd = function()
+      vim.ui.select(vim.api.nvim_get_runtime_file("colors/*.vim", true), {
+        prompt = "Select Colorscheme:",
+        format_item = function(item)
+          return vim.fn.fnamemodify(item, ":t:r")
+        end,
+      }, function(choice)
+        if choice then
+          vim.cmd("colorscheme " .. vim.fn.fnamemodify(choice, ":t:r"))
+        end
+      end)
+    end,
+    rtxt = "<leader>cs",
   },
 }
 
