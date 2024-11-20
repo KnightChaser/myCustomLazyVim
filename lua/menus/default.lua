@@ -1,60 +1,46 @@
 -- ~/.config/nvim/lua/menus/default.lua
 
 return {
+  -- Toggle NvimTree
   {
-    name = "Format Buffer",
+    name = "Toggle NvimTree",
     cmd = function()
-      local ok, conform = pcall(require, "conform")
-
-      if ok then
-        conform.format { lsp_fallback = true }
-      else
-        vim.lsp.buf.format()
-      end
+      vim.cmd "NvimTreeToggle"
     end,
-    rtxt = "<leader>fm",
+    rtxt = "<leader>nt",
   },
 
+  -- Create a New Tab
   {
-    name = "Code Actions",
-    cmd = vim.lsp.buf.code_action,
-    rtxt = "<leader>ca",
-  },
-
-  { name = "separator" },
-
-  {
-    name = "  Lsp Actions",
-    hl = "Exblue",
-    items = "lsp",
-  },
-
-  { name = "separator" },
-
-  {
-    name = "Edit Config",
+    name = "New Tab",
     cmd = function()
       vim.cmd "tabnew"
-      local conf = vim.fn.stdpath "config"
-      vim.cmd("tcd " .. conf .. " | e init.lua")
     end,
-    rtxt = "ed",
+    rtxt = "tn",
   },
 
+  -- Copy Current Line
   {
-    name = "Copy Content",
-    cmd = "%y+",
-    rtxt = "<C-c>",
+    name = "Copy Line",
+    cmd = function()
+      vim.cmd "yyl"
+    end,
+    rtxt = "<leader>cl",
   },
 
+  -- Delete Current Line
   {
-    name = "Delete Content",
-    cmd = "%d",
-    rtxt = "dc",
+    name = "Delete Line",
+    cmd = function()
+      vim.cmd "dyl"
+    end,
+    rtxt = "<leader>dl",
   },
 
+  -- Separator
   { name = "separator" },
 
+  -- Open in Terminal (Maintained)
   {
     name = "  Open in terminal",
     hl = "ExRed",
@@ -75,8 +61,10 @@ return {
     end,
   },
 
+  -- Separator
   { name = "separator" },
 
+  -- Color Picker (Maintained)
   {
     name = "  Color Picker",
     cmd = function()
