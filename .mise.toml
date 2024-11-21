@@ -1,0 +1,6 @@
+[tools]
+python = "3.10.12"
+go = "latest"
+node = "latest"
+fzf = "latest"
+ripgrep = "latest"
