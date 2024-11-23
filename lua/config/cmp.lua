@@ -38,11 +38,11 @@ cmp.setup({
     ["<C-y>"] = cmp.mapping.confirm({ select = true }),
   },
   sources = cmp.config.sources({
-    { name = "copilot" }, -- Copilot as a source
-    { name = "nvim_lsp" }, -- LSP source
-    { name = "luasnip" }, -- Snippets
-    { name = "buffer" }, -- Buffer source
-    { name = "path" }, -- Path source
+    { name = "nvim_lsp", priority = 100 },    -- LSP source
+    { name = "luasnip", priority = 90 },      -- Snippets
+    { name = "buffer", priority = 80 },       -- Buffer source
+    { name = "path", priority = 70 },         -- Path source
+    { name = "copilot", priority = 60 },      -- Copilot as a source
     -- Add other sources if needed
   }),
   window = {
