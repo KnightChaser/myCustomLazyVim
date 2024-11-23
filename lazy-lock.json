@@ -16,6 +16,7 @@
   "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
   "friendly-snippets": { "branch": "main", "commit": "de8fce94985873666bd9712ea3e49ee17aadb1ed" },
   "fzf-lua": { "branch": "main", "commit": "9427dc65afaa7972fb20fc52280cd1449f691928" },
+  "fzy-lua-native": { "branch": "master", "commit": "9d720745d5c2fb563c0d86c17d77612a3519c506" },
   "gitsigns.nvim": { "branch": "main", "commit": "5f808b5e4fef30bd8aca1b803b4e555da07fc412" },
   "grug-far.nvim": { "branch": "main", "commit": "9a2f78219390b47d67795ab09390d7f092e23976" },
   "inc-rename.nvim": { "branch": "main", "commit": "8ba77017ca468f3029bf88ef409c2d20476ea66b" },
@@ -75,5 +76,6 @@
   "vim-wakatime": { "branch": "master", "commit": "cf51327a9e08935569614d1cb24e779ee9f45519" },
   "volt": { "branch": "main", "commit": "8d35e03c70490190149a77c59155618ef4370721" },
   "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" },
+  "wilder.nvim": { "branch": "master", "commit": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf" },
   "yanky.nvim": { "branch": "main", "commit": "f9b905994cccf3c55f41af3a0a1f4c76c844e411" }
 }
