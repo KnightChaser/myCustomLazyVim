@@ -78,3 +78,5 @@ brew install markdownlint-cli2
 ```
 
 5. Always importantly, don't forget to issue `:checkhealth` and `:Mason` command if you encountered some errors! Especially if you just installed system, there might be some missing packages such as `curl`. Major external dependencies such as `node.js` are listed in `.mise.toml`. Install mise(<https://github.com/jdx/mise>) and manage external dependencies in a single shot.
+
+6. Issue a command `:UpdateRemotePlugins` to update the remote plugins. It's required to update the plugins that include the remote plugins, such as `wilder.nvim`.
