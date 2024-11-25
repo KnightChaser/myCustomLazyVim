@@ -1,7 +1,10 @@
+-- ~/.config/nvim/init.lua
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("config.keymaps")
 require("config.options")
+
+vim.cmd[[colorscheme tokyonight-night]]
 
 vim.api.nvim_create_autocmd("VimLeavePre", {
   callback = function()
