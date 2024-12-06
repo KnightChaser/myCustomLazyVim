@@ -89,4 +89,7 @@ vim.keymap.set("n", "<C-t>", function()
 end, { noremap = true, silent = true, desc = "Open Menu Bar" })
 
 --- NVIM terminal
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Exit from the terminal mode and return to the normal mode immediately" })
+
+-- Exit terminal mode and trigger split switching with Ctrl-w
+vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], { noremap = true, silent = true, desc = "Switch split from terminal immediately" })
