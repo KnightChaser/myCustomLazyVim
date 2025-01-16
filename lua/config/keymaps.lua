@@ -11,7 +11,7 @@ vim.api.nvim_set_keymap("n", "<A->>", "<Cmd>BufferMoveNext<CR>", { noremap = tru
 
 -- Goto buffer in position
 for i = 1, 9 do
-  vim.api.nvim_set_keymap("n", "<A-" .. i .. ">", "<Cmd>BufferGoto " .. i .. "<CR>", { noremap = true })
+    vim.api.nvim_set_keymap("n", "<A-" .. i .. ">", "<Cmd>BufferGoto " .. i .. "<CR>", { noremap = true })
 end
 vim.api.nvim_set_keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", { noremap = true })
 
@@ -36,60 +36,66 @@ vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "", linehl = "", nu
 
 -- Use alternative keybindings to avoid conflicts with terminalG
 vim.keymap.set("n", "<F5>", function()
-  require("dap").continue()
+    require("dap").continue()
 end, { desc = "DAP Continue" })
 
 vim.keymap.set("n", "<Leader>do", function()
-  require("dap").step_over()
+    require("dap").step_over()
 end, { desc = "DAP Step Over" })
 
 vim.keymap.set("n", "<Leader>di", function()
-  require("dap").step_into()
+    require("dap").step_into()
 end, { desc = "DAP Step Into" })
 
 vim.keymap.set("n", "<Leader>du", function()
-  require("dap").step_out()
+    require("dap").step_out()
 end, { desc = "DAP Step Out" })
 
 vim.keymap.set("n", "<Leader>b", function()
-  require("dap").toggle_breakpoint()
+    require("dap").toggle_breakpoint()
 end, { desc = "DAP Toggle Breakpoint" })
 
 vim.keymap.set("n", "<Leader>B", function()
-  require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+    require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end, { desc = "DAP Conditional Breakpoint" })
 
 vim.keymap.set("n", "<Leader>lp", function()
-  require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+    require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
 end, { desc = "DAP Log Point" })
 
 vim.keymap.set("n", "<Leader>dr", function()
-  require("dap").repl.open()
+    require("dap").repl.open()
 end, { desc = "DAP REPL Open" })
 
 vim.keymap.set("n", "<Leader>dl", function()
-  require("dap").run_last()
+    require("dap").run_last()
 end, { desc = "DAP Run Last" })
 
 -- DAP widget keybindings
 vim.keymap.set("n", "<Leader>dc", function()
-  require("dapui").toggle()
+    require("dapui").toggle()
 end, { desc = "DAP UI Toggle" })
 
 -- :lua require('dap.ui.widgets').hover()
 vim.keymap.set("n", "<Leader>dh", function()
-  require("dap.ui.widgets").hover()
+    require("dap.ui.widgets").hover()
 end, { desc = "DAP Hover" })
 
 --- menu.nvim
 -- Open the menu bar using Ctrl+t
 vim.keymap.set("n", "<C-t>", function()
-  local menu_options = require("menus.default") -- Load the default menu
-  require("menu").open(menu_options, { mouse = false, border = true })
+    local menu_options = require("menus.default") -- Load the default menu
+    require("menu").open(menu_options, { mouse = false, border = true })
 end, { noremap = true, silent = true, desc = "Open Menu Bar" })
 
 --- NVIM terminal
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Exit from the terminal mode and return to the normal mode immediately" })
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]],
+    { noremap = true, silent = true, desc = "Exit from the terminal mode and return to the normal mode immediately" })
 
 -- Exit terminal mode and trigger split switching with Ctrl-w
-vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], { noremap = true, silent = true, desc = "Switch split from terminal immediately" })
+vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]],
+    { noremap = true, silent = true, desc = "Switch split from terminal immediately" })
+
+-- My custom extension(UUIDv4 auto generator)
+vim.keymap.set("n", "<leader>uib", ":UUIDv4ToBuffer<CR>", { desc = "Insert UUIDv4 to Buffer" })
+vim.keymap.set("n", "<leader>uic", ":UUIDv4ToClipboard<CR>", { desc = "Copy UUIDv4 to Clipboard" })

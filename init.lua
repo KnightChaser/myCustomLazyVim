@@ -3,6 +3,7 @@
 require("config.lazy")
 require("config.keymaps")
 require("config.options")
+require("custom_extensions.uuidv4")
 
 -- Set colorscheme
 vim.cmd([[colorscheme tokyonight-night]])
