@@ -97,8 +97,23 @@ vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]],
     { noremap = true, silent = true, desc = "Switch split from terminal immediately" })
 
 -- My custom extension(UUIDv4 auto generator)
-vim.keymap.set("n", "<leader>uib", ":UUIDv4ToBuffer<CR>", { desc = "Insert UUIDv4 to Buffer" })
-vim.keymap.set("n", "<leader>uic", ":UUIDv4ToClipboard<CR>", { desc = "Copy UUIDv4 to Clipboard" })
+vim.keymap.set("n", "<leader>uib", ":UUIDv4ToBuffer<CR>", { desc = "Insert a random UUIDv4 to the buffer" })
+vim.keymap.set("n", "<leader>uic", ":UUIDv4ToClipboard<CR>", { desc = "Copy a random UUIDv4 to the clipboard" })
+
+-- My custom extension (hexadecimal auto generator with dynamic length input)
+vim.keymap.set("n", "<leader>hib", function()
+    -- Prompt the user to enter the desired length
+    local length = vim.fn.input("Enter the length of the hex number: ", "16")
+    -- Call the command with the user-specified length
+    vim.cmd("HexGenToBuffer " .. length)
+end, { desc = "Insert a random hexadecimal to the buffer with specified length" })
+
+vim.keymap.set("n", "<leader>hic", function()
+    -- Prompt the user to enter the desired length
+    local length = vim.fn.input("Enter the length of the hex number: ", "16")
+    -- Call the command with the user-specified length
+    vim.cmd("HexGenToClipboard " .. length)
+end, { desc = "Copy a random hexadecimal to the clipboard with specified length" })
 
 -- Customized buffer manipulation keymaps
 vim.keymap.set("n", "<leader>xbc",    ":BufferClose<CR>", { desc = "Close the current buffer" })
