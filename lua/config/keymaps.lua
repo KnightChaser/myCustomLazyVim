@@ -99,3 +99,11 @@ vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]],
 -- My custom extension(UUIDv4 auto generator)
 vim.keymap.set("n", "<leader>uib", ":UUIDv4ToBuffer<CR>", { desc = "Insert UUIDv4 to Buffer" })
 vim.keymap.set("n", "<leader>uic", ":UUIDv4ToClipboard<CR>", { desc = "Copy UUIDv4 to Clipboard" })
+
+-- Customized buffer manipulation keymaps
+vim.keymap.set("n", "<leader>xbc",    ":BufferClose<CR>", { desc = "Close the current buffer" })
+vim.keymap.set("n", "<leader>xbac",   ":BufferCloseAllButCurrent<CR>", { desc = "Close every opened buffer except current" })
+vim.keymap.set("n", "<leader>xbf",    ":BufferFirst<CR>", { desc = "Move to the first buffer" })
+vim.keymap.set("n", "<leader>xbl",    ":BufferLast<CR>", { desc = "Move to the last buffer" })
+vim.keymap.set("n", "<leader>xbn",    ":BufferNext<CR>", { desc = "Move to the next buffer" })
+vim.keymap.set("n", "<leader>xbp",    ":BufferPrevious<CR>", { desc = "Move to the previous buffer" })
