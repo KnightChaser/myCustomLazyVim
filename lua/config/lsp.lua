@@ -20,8 +20,6 @@ mason_lspconfig.setup_handlers({
 
                 -- Mappings.
                 local opts = { noremap = true, silent = true }
-
-                -- Define keybindings for LSP actions
                 local keymap = vim.api.nvim_buf_set_keymap
                 keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
                 keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -38,9 +36,42 @@ mason_lspconfig.setup_handlers({
                 keymap(bufnr, "n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
                 keymap(bufnr, "n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
                 keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-                keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+                keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", opts)
             end,
-            -- Additional settings can be added here
+        })
+    end,
+
+    -- Add custom setup for Ruff
+    ["ruff_lsp"] = function()
+        lspconfig.ruff_lsp.setup({
+            on_attach = function(client, bufnr)
+                -- Optionally disable hover to defer it to Pyright
+                client.server_capabilities.hoverProvider = false
+            end,
+            init_options = {
+                settings = {
+                    args = {}, -- Customize additional arguments as needed
+                },
+            },
+        })
+    end,
+
+    -- Customize Pyright to work alongside Ruff
+    ["pyright"] = function()
+        lspconfig.pyright.setup({
+            on_attach = function(client, bufnr)
+                -- Define keybindings and other logic if needed
+            end,
+            settings = {
+                pyright = {
+                    disableOrganizeImports = true, -- Use Ruff for organizing imports
+                },
+                python = {
+                    analysis = {
+                        ignore = { "*" }, -- Use Ruff for linting
+                    },
+                },
+            },
         })
     end,
 })
