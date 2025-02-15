@@ -29,6 +29,10 @@ vim.keymap.set("n", "<leader>ff", telescopeBuiltin.find_files, { desc = "Telesco
 vim.keymap.set("n", "<leader>fg", telescopeBuiltin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>fb", telescopeBuiltin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", telescopeBuiltin.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "<leader>c", function()
+    require("telescope.builtin").commands()
+end, { noremap = true, silent = true })
+
 
 --- DAP(Debug Adapter Protocol)
 -- DAP Keybindings
@@ -116,9 +120,10 @@ vim.keymap.set("n", "<leader>hic", function()
 end, { desc = "Copy a random hexadecimal to the clipboard with specified length" })
 
 -- Customized buffer manipulation keymaps
-vim.keymap.set("n", "<leader>xbc",    ":BufferClose<CR>", { desc = "Close the current buffer" })
-vim.keymap.set("n", "<leader>xbac",   ":BufferCloseAllButCurrent<CR>", { desc = "Close every opened buffer except current" })
-vim.keymap.set("n", "<leader>xbf",    ":BufferFirst<CR>", { desc = "Move to the first buffer" })
-vim.keymap.set("n", "<leader>xbl",    ":BufferLast<CR>", { desc = "Move to the last buffer" })
-vim.keymap.set("n", "<leader>xbn",    ":BufferNext<CR>", { desc = "Move to the next buffer" })
-vim.keymap.set("n", "<leader>xbp",    ":BufferPrevious<CR>", { desc = "Move to the previous buffer" })
+vim.keymap.set("n", "<leader>xbc", ":BufferClose<CR>", { desc = "Close the current buffer" })
+vim.keymap.set("n", "<leader>xbac", ":BufferCloseAllButCurrent<CR>",
+    { desc = "Close every opened buffer except current" })
+vim.keymap.set("n", "<leader>xbf", ":BufferFirst<CR>", { desc = "Move to the first buffer" })
+vim.keymap.set("n", "<leader>xbl", ":BufferLast<CR>", { desc = "Move to the last buffer" })
+vim.keymap.set("n", "<leader>xbn", ":BufferNext<CR>", { desc = "Move to the next buffer" })
+vim.keymap.set("n", "<leader>xbp", ":BufferPrevious<CR>", { desc = "Move to the previous buffer" })
