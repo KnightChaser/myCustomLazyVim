@@ -4,8 +4,6 @@
 
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
-        vim.cmd("NvimTreeToggle")
-        vim.cmd("Hardtime enable")  -- I guess I nedd some neovim training!!!
+        -- vim.cmd("(some automatic command)")
     end,
 })
-
