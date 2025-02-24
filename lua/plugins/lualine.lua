@@ -58,7 +58,7 @@ return {
                         end
 
                         -- Return current time and session uptime
-                        return string.format("%s (session: %s)", current_time, session_time)
+                        return string.format("%s ( %s)", current_time, session_time)
                     end,
                     "searchcount",
                 },
