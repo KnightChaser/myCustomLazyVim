@@ -1,4 +1,6 @@
-# myCustomLazyVim
+# `nvim-dotfile-v1` (previously `myCustomLazyVim`)
+
+### This repository has been archived and no more maintained as I migrated my Neovim configuration toward [`nvim-dotfile-v2`](https://github.com/KnightChaser/nvim-dotfile-v2.git). `v1` is the configuration that I used since I first applied Neovim to my environment, so the inherent configuration was messy and unsustainable. So, I needed to do a fresh start.
 
 ### PREVIEW
 
